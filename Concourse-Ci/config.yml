@@ -1,0 +1,11 @@
+# Docker
+docker-hub-email: shreya.saxena@knoldus.com
+docker-hub-username: shreyaknoldus
+docker-hub-password: Shrey@12345
+docker-hub-repo-name: concourse-repo
+
+# Kubernetes
+server: <<API SERVER URI>>
+namespace: <<NAMESPACE>>
+cad: <<CERT AUTH DATA>>
+token: <<K8 TOKEN>>
