@@ -8,7 +8,6 @@ resource_types:
 resources:
   - name: spring-boot-service
     type: git
-    check_every: 10s
     source:
       uri: https://github.com/shreya07saxena/Concourse-pipeline.git
       branch: master
@@ -20,14 +19,6 @@ resources:
       username: ((docker-hub-username))
       password: ((docker-hub-password))
       repository: ((docker-hub-username))/((docker-hub-repo-name))
-
-#  - name: kubectl
-#    type: kubectl-resource
-#    source:
-#      api_server_uri: ((server))
-#      namespace: ((namespace))
-#      certificate_authority_data: ((cad))
-#      token: ((token))
 
 jobs:
   - name: test
@@ -52,14 +43,3 @@ jobs:
         params:
           build: spring-boot-service-out
 
-#  - name: deploy
-#    public: true
-#    serial: true
-#    plan:
-#      - get: spring-boot-service
-#        trigger: false
-#        passed: [package]
-#
-#      - put: kubectl
-#        params:
-#          file: "spring-boot-service/spring-boot-deploy.yaml"
