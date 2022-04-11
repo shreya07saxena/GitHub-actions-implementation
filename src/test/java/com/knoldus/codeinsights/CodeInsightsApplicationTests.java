@@ -25,6 +25,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest()
 @AutoConfigureMockMvc
+
+//Testing controller
+
+
 public class CodeInsightsApplicationTests {
 
     private static final String WORKSPACE = "chiru_7cj";
