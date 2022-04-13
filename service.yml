@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: github-gke-cd
+spec:
+  selector:
+    app: github-gke-cd
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
